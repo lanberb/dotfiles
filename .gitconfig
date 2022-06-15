@@ -1,0 +1,15 @@
+[user]
+	email = lanberb.2@gmail.com
+	name = Nao Sasaki
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[color]
+	ui = auto
+[alias]
+  branchout = switch -c
+  branches = branch -a
+[rebase]
+	autostash = true
