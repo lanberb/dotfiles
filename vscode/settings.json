@@ -1,0 +1,21 @@
+{
+  "editor.renderWhitespace": "all",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "workbench.statusBar.visible": true,
+  "workbench.activityBar.visible": true,
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "compressed",
+      "extensionName": ".min.css",
+      "savePath": "~/../styles"
+    }
+  ],
+  "workbench.preferredDarkColorTheme": "Visual Studio Dark",
+  "workbench.colorTheme": "Monokai",
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "search.useIgnoreFiles": false,
+  "editor.minimap.enabled": false,
+  "window.zoomLevel": -1
+}
