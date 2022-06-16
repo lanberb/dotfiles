@@ -9,7 +9,9 @@
 [color]
 	ui = auto
 [alias]
-  branchout = switch -c
-  branches = branch -a
+	save = commit -m
+	pushf = push -f
+  	branchout = switch -c
+  	branches = branch -a
 [rebase]
 	autostash = true
