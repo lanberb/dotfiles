@@ -1,0 +1,22 @@
+#!/bin/bash
+echo "================================ START LINKED ================================"
+
+for dotfile in * .??*
+do
+    [[ "$dotfile" == "setup" ]] && continue
+    [[ "$dotfile" == "README.md" ]] && continue
+    [[ "$dotfile" == ".git" ]] && continue
+    [[ "$dotfile" == ".DS_Store" ]] && continue
+
+    unlink $HOME/$dotfile
+    ln -s $(cd $(dirname $0); pwd)/$dotfile "$HOME/$dotfile"
+    echo "[$dotfile] create symbolic link..."
+    echo -e "\033[0;33mpath current :\033[0;39m $(cd $(dirname $0); pwd)"
+    echo -e "\033[0;32mpath symbolic:\033[0;39m "$HOME/$dotfile"\n"
+done
+
+echo "================================ FINISH LINED ================================"
+
+setVSCodeSettings() {
+    echo "vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv $1"
+}
