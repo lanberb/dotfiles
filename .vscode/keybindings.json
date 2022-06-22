@@ -4,4 +4,8 @@
     "key": "ctrl+s",
     "command": "workbench.action.files.saveWithoutFormatting"
   },
+  {
+    "key": "ctrl+cmd+]",
+    "command": "workbench.action.splitEditorToBelowGroup"
+  }
 ]
