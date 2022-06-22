@@ -20,6 +20,6 @@
 	pushf = push -f
 	save = commit -m
 	stashes = stash list
-	wip = git add. && git commit -m "wip"
+	wip = !git add . && git commit -m "wip"
 [rebase]
 	autostash = true
