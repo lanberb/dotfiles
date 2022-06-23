@@ -1,0 +1,20 @@
+cask "docker"
+cask "dropbox"
+cask "deepl"
+cask "google-chrome"
+cask "slack"
+cask "visual-studio-code"
+cask "google-cloud-sdk"
+
+brew "deno"
+brew "direnv"
+brew "docker", link: false
+brew "git"
+brew "nodebrew"
+brew "wget"
+brew "yarn"
+brew "zsh"
+
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"

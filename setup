@@ -20,6 +20,7 @@ setVSCode() {
 for dotfile in * .??*
 do
     [[ "$dotfile" == "setup" ]] && continue
+    [[ "$dotfile" == "Brewfile" ]] && continue
     [[ "$dotfile" == "README.md" ]] && continue
     [[ "$dotfile" == ".git" ]] && continue
     [[ "$dotfile" == ".DS_Store" ]] && continue
