@@ -9,12 +9,18 @@
 [color]
 	ui = auto
 [alias]
-  amend = commit --amend
-  autosquash = rebase -i --autosquash
-  branchout = switch -c
-  branches = branch -a
-  fixup = commit --fixup
+	amend = commit --amend
+	autosquash = rebase -i --autosquash
+	branches = branch -a
+	branchout = switch -c
+	cancel = reset --soft HEAD^
+	fixup = commit --fixup
+	logs = log --oneline
+	pop = stash pop
+	pushat = push origin @
 	pushf = push -f
 	save = commit -m
+	stashes = stash list
+	wip = !git add . && git commit -m "wip"
 [rebase]
 	autostash = true

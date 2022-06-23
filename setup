@@ -1,22 +1,39 @@
 #!/bin/bash
 echo "================================ START LINKED ================================"
 
+logger() {
+    echo "[$1] create symbolic link..."
+    echo -e "\033[0;33mpath current :\033[0;39m $(cd $(dirname $0); pwd)/$1"
+    echo -e "\033[0;32mpath symbolic:\033[0;39m "$HOME/$1"\n"
+}
+setVSCode() {
+    if [ -f .vscode/keybindings.json ]; then
+        ln -f -s "$(cd $(dirname $0); pwd)/$1/keybindings.json" $HOME/Library/Application\ Support/Code/User/keybindings.json
+        logger $1/keybindings.json
+    fi
+    if [ -f .vscode/settings.json ]; then
+        ln -f -s "$(cd $(dirname $0); pwd)/$1/settings.json" $HOME/Library/Application\ Support/Code/User/settings.json
+        logger $1/settings.json
+    fi
+}
+
 for dotfile in * .??*
 do
-    [[ "$dotfile" == "setup" ]] && continue
-    [[ "$dotfile" == "README.md" ]] && continue
-    [[ "$dotfile" == ".git" ]] && continue
-    [[ "$dotfile" == ".DS_Store" ]] && continue
+        [[ "$dotfile" == "install" ]] && continue
+	[[ "$dotfile" == "setup" ]] && continue
+	[[ "$dotfile" == "Brewfile" ]] && continue
+	[[ "$dotfile" == "README.md" ]] && continue
+	[[ "$dotfile" == ".git" ]] && continue
+	[[ "$dotfile" == ".DS_Store" ]] && continue
 
-    unlink $HOME/$dotfile
-    ln -s $(cd $(dirname $0); pwd)/$dotfile "$HOME/$dotfile"
-    echo "[$dotfile] create symbolic link..."
-    echo -e "\033[0;33mpath current :\033[0;39m $(cd $(dirname $0); pwd)"
-    echo -e "\033[0;32mpath symbolic:\033[0;39m "$HOME/$dotfile"\n"
+    	if [[ "$dotfile" == ".vscode" ]]; then
+        	setVSCode $dotfile
+        	continue
+   	 fi
+
+    	unlink $HOME/$dotfile
+    	ln -s "$(cd $(dirname $0); pwd)/$dotfile" "$HOME/$dotfile"
+    	logger $dotfile
 done
 
-echo "================================ FINISH LINED ================================"
-
-setVSCodeSettings() {
-    echo "vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv $1"
-}
+echo "================================ FINISH LINKED ================================"
