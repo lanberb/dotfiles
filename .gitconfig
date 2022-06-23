@@ -17,6 +17,7 @@
 	fixup = commit --fixup
 	logs = log --oneline
 	pop = stash pop
+	pushat = push origin @
 	pushf = push -f
 	save = commit -m
 	stashes = stash list
