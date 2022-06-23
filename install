@@ -1,0 +1,25 @@
+# Install core tools
+ask() {
+	printf "$* (Y/n)"
+	local answer
+	read answer
+
+	case $answer in
+		[yN] | [yN]es | "YES" ) return 0 ;;
+		* ) return 1 ;;
+	esac
+}
+
+# Homebrew
+if [[ ! -x `which brew` ]]; then
+	if ask "Homebrew install?"; then
+		/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+		brew update
+		brew upgrade --all
+		brew doctor
+		brew -v
+		
+		# install packages
+		brew bundle
+	fi
+fi
