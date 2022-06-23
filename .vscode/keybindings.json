@@ -6,6 +6,6 @@
   },
   {
     "key": "ctrl+cmd+]",
-    "command": "workbench.action.splitEditorToBelowGroup"
+    "command": "workbench.action.splitEditorToRightGroup"
   }
 ]

@@ -10,7 +10,7 @@
 	ui = auto
 [alias]
 	amend = commit --amend
-	autosquash = rebase -i --autosquash
+	autosquash = rebase --autosquash
 	branches = branch -a
 	branchout = switch -c
 	cancel = reset --soft HEAD^
@@ -23,4 +23,4 @@
 	stashes = stash list
 	wip = !git add . && git commit -m "wip"
 [rebase]
-	autostash = true
+	autosquash = true
