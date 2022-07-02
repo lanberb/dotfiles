@@ -14,6 +14,7 @@
 	branches = branch -a
 	branchout = switch -c
 	cancel = reset --soft HEAD^
+	empty = commit --allow-empty -m
 	fixup = commit --fixup
 	logs = log --oneline
 	pop = stash pop
