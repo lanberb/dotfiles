@@ -15,6 +15,7 @@
 	branchout = switch -c
 	cancel = reset --soft HEAD^
 	fixup = commit --fixup
+	logr = log --oneline --reverse
 	logs = log --oneline
 	pop = stash pop
 	pushat = push origin @
