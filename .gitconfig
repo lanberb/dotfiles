@@ -21,6 +21,7 @@
 	pop = stash pop
 	pushat = push origin @
 	pushf = push -f
+	pushh = push -f origin HEAD
 	save = commit -m
 	stashes = stash list
 	wip = !git add . && git commit -m "wip"
