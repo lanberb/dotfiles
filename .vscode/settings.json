@@ -17,5 +17,9 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "search.useIgnoreFiles": false,
   "editor.minimap.enabled": false,
+  "[typescript]": {},
+  "workbench.startupEditor": "none",
+  "files.trimTrailingWhitespace": true,
+  "diffEditor.ignoreTrimWhitespace": false,
   "window.zoomLevel": -2
 }

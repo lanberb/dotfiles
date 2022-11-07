@@ -1,6 +1,6 @@
 [user]
 	email = lanberb.2@gmail.com
-	name = Nao Sasaki
+	name = lanberb
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -9,21 +9,29 @@
 [color]
 	ui = auto
 [alias]
+        abort = rebase --abort
 	amend = commit --amend
 	autosquash = rebase --autosquash
 	branches = branch -a
 	branchout = switch -c
 	cancel = reset --soft HEAD^
-	empty = commit --allow-empty -m
+        continue = rebase --continue
+	drop = stash drop
+        empty = commit --allow-empty -m
+        feat = !"f() { str=$1; git commit -m 'feat: '$str;};f"
+        fix = !"f() { str=$1; git commit -m 'fix: '$str;};f"
 	fixup = commit --fixup
-	logr = log --oneline --reverse
+        from = !"git show-branch | grep '*' | grep -v '$(git rev-parse --abbrev-ref HEAD)' | head -1 | awk -F'[]~^[]' '{print $2}'"
+	list = stash list
+        logr = log --oneline --reverse
 	logs = log --oneline
+        onto = rebase --onto
 	pop = stash pop
 	pushat = push origin @
 	pushf = push -f
 	pushh = push -f origin HEAD
 	save = commit -m
-	stashes = stash list
+        tmp = stash -u -k -m
 	wip = !git add . && git commit -m "wip"
 [rebase]
 	autosquash = true
