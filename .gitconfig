@@ -22,16 +22,16 @@
         fix = !"f() { str=$1; git commit -m 'fix: '$str;};f"
 	fixup = commit --fixup
         from = !"git show-branch | grep '*' | grep -v '$(git rev-parse --abbrev-ref HEAD)' | head -1 | awk -F'[]~^[]' '{print $2}'"
-	list = stash list
         logr = log --oneline --reverse
 	logs = log --oneline
         onto = rebase --onto
 	pop = stash pop
 	pushat = push origin @
-	pushf = push -f
+	pushf = push -f origin @
 	pushh = push -f origin HEAD
 	save = commit -m
-        tmp = stash -u -k -m
+        tmp = !"f() { git stash -u -k -m $1;};f"
+	tmps = stash list
 	wip = !git add . && git commit -m "wip"
 [rebase]
 	autosquash = true
