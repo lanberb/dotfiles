@@ -1,6 +1,5 @@
 {
   "editor.renderWhitespace": "all",
-  "liveServer.settings.donotShowInfoMsg": true,
   "workbench.statusBar.visible": true,
   "workbench.activityBar.visible": true,
   "liveSassCompile.settings.formats": [
@@ -21,5 +20,6 @@
   "workbench.startupEditor": "none",
   "files.trimTrailingWhitespace": true,
   "diffEditor.ignoreTrimWhitespace": false,
-  "window.zoomLevel": -2
+  "window.zoomLevel": -1,
+  "workbench.panel.defaultLocation": "right"
 }

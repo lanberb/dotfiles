@@ -19,7 +19,8 @@
 	drop = stash drop
         empty = commit --allow-empty -m
         feat = !"f() { str=$1; git commit -m 'feat: '$str;};f"
-        fix = !"f() { str=$1; git commit -m 'fix: '$str;};f"
+	refactor = !"f() { str=$1; git commit -m 'refactor: '$str;};f"
+	fix = !"f() { str=$1; git commit -m 'fix: '$str;};f"
 	fixup = commit --fixup
         from = !"git show-branch | grep '*' | grep -v '$(git rev-parse --abbrev-ref HEAD)' | head -1 | awk -F'[]~^[]' '{print $2}'"
         logr = log --oneline --reverse
