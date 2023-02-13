@@ -33,6 +33,6 @@
 	save = commit -m
         tmp = !"f() { git stash -u -k -m $1;};f"
 	tmps = stash list
-	wip = !git add . && git commit -m "wip"
+	wip = !git add . && git commit -m "wip" --no-verify
 [rebase]
 	autosquash = true

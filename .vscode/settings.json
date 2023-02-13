@@ -20,6 +20,6 @@
   "workbench.startupEditor": "none",
   "files.trimTrailingWhitespace": true,
   "diffEditor.ignoreTrimWhitespace": false,
-  "window.zoomLevel": -1,
-  "workbench.panel.defaultLocation": "right"
+  "workbench.panel.defaultLocation": "right",
+  "window.zoomLevel": -1
 }
