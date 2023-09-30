@@ -26,5 +26,6 @@
   "diffEditor.maxComputationTime": 0,
   "figma.autocompleteBlocks": true,
   "explorer.sortOrder": "type",
-  "window.zoomLevel": -1
+  "window.zoomLevel": 0,
+  "svelte.enable-ts-plugin": true
 }
