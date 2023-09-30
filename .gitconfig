@@ -9,29 +9,34 @@
 [color]
 	ui = auto
 [alias]
-        abort = rebase --abort
+	abort = rebase --abort
 	amend = commit --amend
 	autosquash = rebase --autosquash
+	bleach = branch -D
 	branches = branch -a
 	branchout = switch -c
 	cancel = reset --soft HEAD^
-        continue = rebase --continue
+	chore = !"f() { str=$1; git commit -m 'chore: '$str;};f"
+	continue = rebase --continue
 	drop = stash drop
-        empty = commit --allow-empty -m
-        feat = !"f() { str=$1; git commit -m 'feat: '$str;};f"
-	refactor = !"f() { str=$1; git commit -m 'refactor: '$str;};f"
+	empty = commit --allow-empty -m
+	feat = !"f() { str=$1; git commit -m 'feat: '$str;};f"
 	fix = !"f() { str=$1; git commit -m 'fix: '$str;};f"
 	fixup = commit --fixup
-        from = !"git show-branch | grep '*' | grep -v '$(git rev-parse --abbrev-ref HEAD)' | head -1 | awk -F'[]~^[]' '{print $2}'"
-        logr = log --oneline --reverse
+	from = !"git show-branch | grep '*' | grep -v '$(git rev-parse --abbrev-ref HEAD)' | head -1 | awk -F'[]~^[]' '{print $2}'"
+	onto = rebase --onto
+	logr = log --oneline --reverse
 	logs = log --oneline
-        onto = rebase --onto
+	perf = !"f() { str=$1; git commit -m 'perf: '$str;};f"
 	pop = stash pop
 	pushat = push origin @
 	pushf = push -f origin @
 	pushh = push -f origin HEAD
+	refactor = !"f() { str=$1; git commit -m 'refactor: '$str;};f"
 	save = commit -m
-        tmp = !"f() { git stash -u -k -m $1;};f"
+	skip = rebase --skip
+	style = !"f() { str=$1; git commit -m 'style: '$str;};f"
+	tmp = !"f() { git stash -u -k -m $2;};f"
 	tmps = stash list
 	wip = !git add . && git commit -m "wip" --no-verify
 [rebase]

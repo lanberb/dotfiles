@@ -11,7 +11,6 @@
   ],
   "workbench.preferredDarkColorTheme": "Visual Studio Dark",
   "workbench.colorTheme": "Monokai",
-  "editor.formatOnSave": true,
   "editor.tabSize": 2,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "search.useIgnoreFiles": false,
@@ -21,5 +20,11 @@
   "files.trimTrailingWhitespace": true,
   "diffEditor.ignoreTrimWhitespace": false,
   "workbench.panel.defaultLocation": "right",
+  "git.openRepositoryInParentFolders": "never",
+  "prettier.printWidth": 640,
+  "editor.formatOnSave": true,
+  "diffEditor.maxComputationTime": 0,
+  "figma.autocompleteBlocks": true,
+  "explorer.sortOrder": "type",
   "window.zoomLevel": -1
 }
