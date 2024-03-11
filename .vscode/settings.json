@@ -1,7 +1,5 @@
 {
   "editor.renderWhitespace": "all",
-  "workbench.statusBar.visible": true,
-  "workbench.activityBar.visible": true,
   "liveSassCompile.settings.formats": [
     {
       "format": "compressed",
@@ -18,14 +16,16 @@
   "[typescript]": {},
   "workbench.startupEditor": "none",
   "files.trimTrailingWhitespace": true,
-  "diffEditor.ignoreTrimWhitespace": false,
   "workbench.panel.defaultLocation": "right",
   "git.openRepositoryInParentFolders": "never",
-  "prettier.printWidth": 640,
   "editor.formatOnSave": true,
   "diffEditor.maxComputationTime": 0,
   "figma.autocompleteBlocks": true,
   "explorer.sortOrder": "type",
-  "window.zoomLevel": 0,
-  "svelte.enable-ts-plugin": true
+  "svelte.enable-ts-plugin": true,
+  "prettier.withNodeModules": true,
+  "editor.largeFileOptimizations": false,
+  "workbench.editor.enablePreview": false,
+  "prettier.printWidth": 120,
+  "window.zoomLevel": -1
 }

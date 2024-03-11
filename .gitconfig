@@ -14,7 +14,8 @@
 	autosquash = rebase --autosquash
 	bleach = branch -D
 	branches = branch -a
-	branchout = switch -c
+	branchout = checkout -b
+	bitch = switch -c
 	cancel = reset --soft HEAD^
 	chore = !"f() { str=$1; git commit -m 'chore: '$str;};f"
 	continue = rebase --continue
