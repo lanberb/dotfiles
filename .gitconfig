@@ -12,6 +12,7 @@
 	abort = rebase --abort
 	amend = commit --amend
 	autosquash = rebase --autosquash
+	back = switch -
 	bleach = branch -D
 	branches = branch -a
 	branchout = checkout -b
