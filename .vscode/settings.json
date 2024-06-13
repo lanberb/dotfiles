@@ -1,31 +1,26 @@
 {
   "editor.renderWhitespace": "all",
-  "liveSassCompile.settings.formats": [
-    {
-      "format": "compressed",
-      "extensionName": ".min.css",
-      "savePath": "~/../styles"
-    }
-  ],
   "workbench.preferredDarkColorTheme": "Visual Studio Dark",
   "workbench.colorTheme": "Monokai",
   "editor.tabSize": 2,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "search.useIgnoreFiles": false,
   "editor.minimap.enabled": false,
-  "[typescript]": {},
   "workbench.startupEditor": "none",
   "files.trimTrailingWhitespace": true,
-  "workbench.panel.defaultLocation": "right",
   "git.openRepositoryInParentFolders": "never",
   "editor.formatOnSave": true,
   "diffEditor.maxComputationTime": 0,
   "figma.autocompleteBlocks": true,
   "explorer.sortOrder": "type",
   "svelte.enable-ts-plugin": true,
-  "prettier.withNodeModules": true,
   "editor.largeFileOptimizations": false,
   "workbench.editor.enablePreview": false,
-  "prettier.printWidth": 120,
-  "window.zoomLevel": -1
+  "window.zoomLevel": -1,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "eslint.useESLintClass": true
+  "eslint.experimental.useFlatConfig": true,
+  "eslint.options": {
+    "overrideConfigFile": "eslint.config.mjs"
+  },
+  "editor.defaultFormatter": "biomejs.biome",
 }

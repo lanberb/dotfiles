@@ -37,6 +37,7 @@
 	refactor = !"f() { str=$1; git commit -m 'refactor: '$str;};f"
 	save = commit -m
 	skip = rebase --skip
+	sw = switch
 	style = !"f() { str=$1; git commit -m 'style: '$str;};f"
 	tmp = !"f() { git stash -u -k -m $2;};f"
 	tmps = stash list
