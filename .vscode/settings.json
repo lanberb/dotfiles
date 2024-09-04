@@ -8,7 +8,6 @@
   "workbench.startupEditor": "none",
   "files.trimTrailingWhitespace": true,
   "git.openRepositoryInParentFolders": "never",
-  "editor.formatOnSave": true,
   "diffEditor.maxComputationTime": 0,
   "figma.autocompleteBlocks": true,
   "explorer.sortOrder": "type",
@@ -17,10 +16,21 @@
   "workbench.editor.enablePreview": false,
   "window.zoomLevel": -1,
   "diffEditor.ignoreTrimWhitespace": false,
-  "eslint.useESLintClass": true
-  "eslint.experimental.useFlatConfig": true,
-  "eslint.options": {
-    "overrideConfigFile": "eslint.config.mjs"
+  "editor.formatOnSave": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   },
-  "editor.defaultFormatter": "biomejs.biome",
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "workbench.editor.editorActionsLocation": "hidden",
+  "editor.codeActionsOnSave": {
+    "quickfix.biome": "explicit"
+  }
 }
