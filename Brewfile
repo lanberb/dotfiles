@@ -5,6 +5,7 @@ cask "google-chrome"
 cask "slack"
 cask "visual-studio-code"
 cask "google-cloud-sdk"
+cask "obs"
 
 brew "deno"
 brew "direnv"
