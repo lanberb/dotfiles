@@ -22,6 +22,7 @@
 	continue = rebase --continue
 	drop = stash drop
 	empty = commit --allow-empty -m
+	fase = !git fetch && git rebase
 	feat = !"f() { str=$1; git commit -m 'feat: '$str;};f"
 	fix = !"f() { str=$1; git commit -m 'fix: '$str;};f"
 	fixup = commit --fixup
