@@ -20,9 +20,11 @@
 	cancel = reset --soft HEAD^
 	chore = !"f() { str=$1; git commit -m 'chore: '$str;};f"
 	continue = rebase --continue
-	drop = stash drop
+	curb = !"git branch --contains | sed 's/\\* //g' | tr -d '\n'"
+ 	drop = stash drop
 	empty = commit --allow-empty -m
 	fase = !git fetch && git rebase
+	ferge = !git fetch && git merge
 	feat = !"f() { str=$1; git commit -m 'feat: '$str;};f"
 	fix = !"f() { str=$1; git commit -m 'fix: '$str;};f"
 	fixup = commit --fixup
@@ -42,6 +44,8 @@
 	style = !"f() { str=$1; git commit -m 'style: '$str;};f"
 	tmp = !"f() { git stash -u -k -m $2;};f"
 	tmps = stash list
+	tokiwomodosou = !"f() { str=$1; git revert $str...HEAD --no-edit && git commit };f"
+	undrop = cherry-pick -n -m1
 	wip = !git add . && git commit -m "wip" --no-verify
 [rebase]
 	autosquash = true
