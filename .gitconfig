@@ -21,7 +21,8 @@
 	chore = !"f() { str=$1; git commit -m 'chore: '$str;};f"
 	continue = rebase --continue
 	curb = !"git branch --contains | sed 's/\\* //g' | tr -d '\n'"
- 	drop = stash drop
+ 	curby = !"git curb | pbcopy"
+	drop = stash drop
 	empty = commit --allow-empty -m
 	fase = !git fetch && git rebase
 	ferge = !git fetch && git merge
